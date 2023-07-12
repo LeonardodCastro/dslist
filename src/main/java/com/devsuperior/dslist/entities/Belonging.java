@@ -1,6 +1,5 @@
 package com.devsuperior.dslist.entities;
 
-import com.devsuperior.dslist.dto.GameMinDTO;
 import jakarta.persistence.EmbeddedId;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
@@ -13,15 +12,15 @@ public class Belonging {
     @EmbeddedId
     private BelongingPK id = new BelongingPK();
 
-    private Integer posisiton;
+    private Integer position;
 
     public Belonging() {
     }
 
     public Belonging(Game game, GameList list, Integer posisiton) {
         id.setGame(game);
-        id.setGameList(list);
-        this.posisiton = posisiton;
+        id.setList(list);
+        this.position = posisiton;
     }
 
     @Override
@@ -46,10 +45,10 @@ public class Belonging {
     }
 
     public Integer getPosisiton() {
-        return posisiton;
+        return position;
     }
 
     public void setPosisiton(Integer posisiton) {
-        this.posisiton = posisiton;
+        this.position = posisiton;
     }
 }
