@@ -1,12 +1,13 @@
 package com.devsuperior.dslist.entities;
 
-import jakarta.persistence.Embeddable;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
+import javax.persistence.Embeddable;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
+import java.io.Serializable;
 import java.util.Objects;
 @Embeddable
-public class BelongingPK {
+public class BelongingPK implements Serializable {
     @ManyToOne
     @JoinColumn(name = "game_id")
     private Game game;
