@@ -6,6 +6,7 @@ import javax.persistence.ManyToOne;
 
 import java.io.Serializable;
 import java.util.Objects;
+
 @Embeddable
 public class BelongingPK implements Serializable {
     @ManyToOne

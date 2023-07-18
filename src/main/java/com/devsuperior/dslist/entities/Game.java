@@ -3,6 +3,7 @@ package com.devsuperior.dslist.entities;
 import javax.persistence.*;
 
 import java.util.Objects;
+
 @Entity
 @Table(name = "tb_game")
 public class Game {
@@ -34,7 +35,7 @@ public class Game {
         return Objects.hash(id);
     }
 
-    public Game(){
+    public Game() {
     }
 
     public Game(Long id, String title, Integer year, String genre, String platforms, Double score, String imgUrl, String shortDescription, String longDescription) {

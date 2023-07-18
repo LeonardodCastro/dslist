@@ -1,10 +1,6 @@
 package com.devsuperior.dslist.dto;
 
 import com.devsuperior.dslist.entities.Game;
-import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 import org.springframework.beans.BeanUtils;
 
 public class GameDTO {
@@ -17,10 +13,12 @@ public class GameDTO {
     private String imgUrl;
     private String shortDescription;
     private String longDescription;
-    public GameDTO(){
+
+    public GameDTO() {
     }
-    public GameDTO(Game entity){
-        BeanUtils.copyProperties(entity,this);
+
+    public GameDTO(Game entity) {
+        BeanUtils.copyProperties(entity, this);
     }
 
     public Long getId() {
